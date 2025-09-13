@@ -2,9 +2,9 @@ fun main(args: Array<String>) {
 
     println("Приветствую")
     println("Введите задачу какую хотите увидеть:")
-val input = readLine()
+val inp = readLine()
 
-    when(input)
+    when (inp)
     {
         "0" -> return
         "1" -> teat1()
