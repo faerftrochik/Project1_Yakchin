@@ -21,7 +21,7 @@ val inp = readLine()
         "5" -> teat5()
         "6" -> teat6()
 
-        else -> print("Че ты ввел(а)?")
+        else -> print("Ввести надо цифры...")
     }
 }
 
@@ -41,11 +41,11 @@ val inp = readLine()
 
         for (i in 1 until input.length) {
             if (input[i] == input[i - 1]) {
-                count++
+                count += 1
             } else {
                 result += input[i - 1]
                 if (count > 1) result += count
-                count = 1
+                count == 1
             }
         }
 
@@ -57,12 +57,37 @@ val inp = readLine()
 
     fun teat2()
     {
+        println("Введите строку:")
+        val input = readLine() ?: ""
+        if (input.isEmpty()) {
+            println("Строка пустая")
+            return
+        }
 
+        val map = mutableMapOf()
+
+        for (ch in input) {
+            map[ch] = (map[ch] ?: 0) + 1
+        }
+
+        val sorted = map.toSortedMap()
+
+        for ((key, value) in sorted) {
+            println("$key - $value")
+        }
     }
 
     fun teat3()
     {
+        println("Введите число:")
+        val input = readLine()
 
+        try {
+            val number = input?.toInt() ?: 0
+            println("В двоичной системе: ${number.toString(2)}")
+        } catch (e: Exception) {
+            println("Ошибка ввода")
+        }
     }
 
     fun teat4()
