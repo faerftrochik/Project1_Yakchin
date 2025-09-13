@@ -9,8 +9,10 @@ val inp = readLine()
         "0" -> return
         "1" -> teat1()
         "2" -> teat2()
-
-
+        "3" -> teat3()
+        "4" -> teat4()
+        "5" -> teat5()
+        "6" -> teat6()
 
         else -> print("Че ты ввел(а)?")
     }
@@ -46,6 +48,26 @@ val inp = readLine()
     }
 
     fun teat2()
+    {
+
+    }
+
+    fun teat3()
+    {
+
+    }
+
+    fun teat4()
+    {
+
+    }
+
+    fun teat5()
+    {
+
+    }
+
+    fun teat6()
     {
 
     }
