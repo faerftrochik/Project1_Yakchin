@@ -45,7 +45,7 @@ val inp = readLine()
             } else {
                 result += input[i - 1]
                 if (count > 1) result += count
-                count == 1
+                count = 1
             }
         }
 
@@ -83,14 +83,19 @@ val inp = readLine()
     {
         //Задание 3
 
-        println("Введите число:")
+        println("Введите натуральное число:")
         val input = readLine()
 
         try {
-            val number = input?.toInt() ?: 0
+            val number = input?.toInt() ?: throw Exception("Пустой ввод")
+            if (number < 0)
+            {
+                println("введите неотрицательное число")
+                return
+            }
             println("В двоичной системе: ${number.toString(2)}")
         } catch (e: Exception) {
-            println("Ошибка ввода")
+            println("Ошибка ввода: введите целое число")
         }
     }
 
@@ -101,9 +106,9 @@ val inp = readLine()
         println("Введите выражение (число1 число2 операция):")
         val input = readLine() ?: ""
 
-        val parts = input.split(" ")
+        val parts = input.trim().split(Regex("\\s+"))
         if (parts.size != 3) {
-            println("Неверный ввод")
+            println("Неверный ввод. Введите: число1 число2 операция")
             return
         }
 
@@ -112,8 +117,8 @@ val inp = readLine()
             val b = parts[1].toDouble()
             val op = parts[2]
 
-            val result = when (op) {
-                "+" -> a + b
+            when (op) {
+                "+" -> println("Результат: ${a + b}")
                 "-" -> a - b
                 "*" -> a * b
                 "/" -> if (b != 0.0) a / b else "Деление на ноль"
