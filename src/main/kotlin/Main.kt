@@ -16,6 +16,7 @@ val inp = readLine()
 
         else -> print("Че ты ввел(а)?")
     }
+}
 
     fun teat1()
     {
@@ -71,5 +72,3 @@ val inp = readLine()
     {
 
     }
-
-}
