@@ -1,19 +1,40 @@
 fun main(args: Array<String>) {
 
-    //Задание 1
+val input = readLine()
 
-    println("Введите буквы в строчку:")
-    val testA = readln()
-    println()
+    when(input)
+    {
+        "0" -> return
+        "1" -> teat1()
+        "2" -> teat2()
 
-    for (i in testA) {
-        print(i)
+
+
+        else -> print("Че ты ввел(а)?")
     }
 
+    fun teat1()
+    {
+        //Задание 1
+
+        val k = 0;
+        println("Введите буквы в строчку:")
+        val testA = readln()
+        println()
 
 
+        for (i in testA) {
+            if (testA == testA)
+            {k + 1}
+            print(i)
+            print(k)
+        }
+        println("Program arguments: ${args.joinToString()}")
+    }
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    fun teat2()
+    {
+
+    }
+
 }
