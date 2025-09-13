@@ -19,19 +19,30 @@ val inp = readLine()
     {
         //Задание 1
 
-        val k = 0;
-        println("Введите буквы в строчку:")
-        val testA = readln()
-        println()
-
-
-        for (i in testA) {
-            if (testA == testA)
-            {k + 1}
-            print(i)
-            print(k)
+        println("Введите строку:")
+        val input = readLine() ?: ""
+        if (input.isEmpty()) {
+            println("Строка пустая")
+            return
         }
-        println("Program arguments: ${args.joinToString()}")
+
+        var result = ""
+        var count = 1
+
+        for (i in 1 until input.length) {
+            if (input[i] == input[i - 1]) {
+                count++
+            } else {
+                result += input[i - 1]
+                if (count > 1) result += count
+                count = 1
+            }
+        }
+
+        result += input.last()
+        if (count > 1) result += count
+
+        println("Результат: $result")
     }
 
     fun teat2()
