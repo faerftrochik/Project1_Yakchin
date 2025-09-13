@@ -1,7 +1,14 @@
 fun main(args: Array<String>) {
 
     println("Приветствую")
-    println("Введите задачу какую хотите увидеть:")
+    println("Сприсок задач:")
+    println("Первая задача - 1")
+    println("Вторая задача - 2")
+    println("Третья задача - 3")
+    println("Четвертая задача - 4")
+    println("Пятая задача - 5")
+    println("Шестая задача - 6")
+    println("Введите задачу какую хотите увидеть - ")
 val inp = readLine()
 
     when (inp)
