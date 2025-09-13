@@ -1,5 +1,7 @@
 fun main(args: Array<String>) {
 
+    println("Приветствую")
+    println("Введите задачу какую хотите увидеть:")
 val input = readLine()
 
     when(input)
