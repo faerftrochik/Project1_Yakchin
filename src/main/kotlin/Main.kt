@@ -1,7 +1,7 @@
 fun main(args: Array<String>) {
 
     println("Приветствую")
-    println("Сприсок задач:")
+    println("Список задач:")
     println("Первая задача - 1")
     println("Вторая задача - 2")
     println("Третья задача - 3")
@@ -117,10 +117,10 @@ val inp = readLine()
             val b = parts[1].toDouble()
             val op = parts[2]
 
-            when (op) {
+            val result = when (op) {
                 "+" -> println("Результат: ${a + b}")
-                "-" -> a - b
-                "*" -> a * b
+                "-" -> println("Результат: ${a - b}")
+                "*" -> println("Результат: ${a * b}")
                 "/" -> if (b != 0.0) a / b else "Деление на ноль"
                 else -> "Неизвестная операция"
             }
