@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
     println("Четвертая задача - 4")
     println("Пятая задача - 5")
     println("Шестая задача - 6")
-    println("Введите задачу какую хотите увидеть - ")
+    print("Введите задачу какую хотите увидеть - ")
 val inp = readLine()
 
     when (inp)
