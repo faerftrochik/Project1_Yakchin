@@ -66,7 +66,7 @@ val inp = readLine()
             return
         }
 
-        val map = mutableMapOf<Char, int>()
+        val map = mutableMapOf<Char, Int>()
 
         for (ch in input) {
             map[ch] = (map[ch] ?: 0) + 1
